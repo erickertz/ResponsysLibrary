@@ -6,7 +6,7 @@ class ResponsysController {
 
 	protected $responsysLibrary;
 
-	public function __construct(ResponsysServiceProvider $responsysLibrary)
+	public function __construct(ResponsysLibrary $responsysLibrary)
 	{
 		$this->responsysLibrary = $responsysLibrary;
 	}
