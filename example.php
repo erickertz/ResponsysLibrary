@@ -36,8 +36,5 @@ class ResponsysController {
 		$this->responsysServiceProvider->setReqArgsMessage();
 		$this->responsysServiceProvider->setRecipient($emailAddress);
 		$triggerCampaignMessage = $this->responsysServiceProvider->triggerCampaignMessage();
-
-		$preferredAirports = $this->preferredAirport->lists('name', 'id');
-		$this->layout->content = View::make($this->themeName.'::entries.create')
-			->with('preferredAirports', $preferredAirports);
+		
 	}
