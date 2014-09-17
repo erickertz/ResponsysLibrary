@@ -38,3 +38,5 @@ class ResponsysController {
 		$triggerCampaignMessage = $this->responsysLibrary->triggerCampaignMessage();
 		
 	}
+	
+}
