@@ -37,6 +37,9 @@ class ResponsysController {
 		$this->responsysLibrary->setRecipient($emailAddress);
 		$triggerCampaignMessage = $this->responsysLibrary->triggerCampaignMessage();
 		
+		// logout
+		$this->responsysLibrary->logout();
+		
 	}
 	
 }
