@@ -18,23 +18,23 @@ class ResponsysController {
 		$firstName = "your_first_name";
 		
 		// login as api user
-		$this->responsysServiceProvider->setUsername('YOUR_USER_NAME');
-		$this->responsysServiceProvider->setPassword('**************');
-		$login = $this->responsysServiceProvider->login();
+		$this->responsysLibrary->setUsername('YOUR_USER_NAME');
+		$this->responsysLibrary->setPassword('**************');
+		$login = $this->responsysLibrary->login();
 		
 		// add member to list
-		$this->responsysServiceProvider->setMyFolderName('YOUR_FOLDER_NAME');
-		$this->responsysServiceProvider->setMyTableName('YOUR_TABLE_NAME');
+		$this->responsysLibrary->setMyFolderName('YOUR_FOLDER_NAME');
+		$this->responsysLibrary->setMyTableName('YOUR_TABLE_NAME');
 		$fields = array('EMAIL_ADDRESS_', 'FIRST_NAME');
 		$values = array($emailAddress, $firstName);
-		$this->responsysServiceProvider->setReqArgsMember($fields,$values);
-		$mergeListMembers = $this->responsysServiceProvider->mergeListMembers();
+		$this->responsysLibrary->setReqArgsMember($fields,$values);
+		$mergeListMembers = $this->responsysLibrary->mergeListMembers();
 		
 		// trigger campaign email
-		$this->responsysServiceProvider->setMyCampName('YOUR_CAMPAIGN_NAME');
-		$this->responsysServiceProvider->setMyCampFolderName('YOUR_CAMPAIGN_FOLDER_NAME');
-		$this->responsysServiceProvider->setReqArgsMessage();
-		$this->responsysServiceProvider->setRecipient($emailAddress);
-		$triggerCampaignMessage = $this->responsysServiceProvider->triggerCampaignMessage();
+		$this->responsysLibrary->setMyCampName('YOUR_CAMPAIGN_NAME');
+		$this->responsysLibrary->setMyCampFolderName('YOUR_CAMPAIGN_FOLDER_NAME');
+		$this->responsysLibrary->setReqArgsMessage();
+		$this->responsysLibrary->setRecipient($emailAddress);
+		$triggerCampaignMessage = $this->responsysLibrary->triggerCampaignMessage();
 		
 	}
