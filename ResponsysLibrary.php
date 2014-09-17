@@ -69,6 +69,11 @@ class ResponsysLibrary  {
 			return $this->loginResult;
 		}
 		
+		public function logout()
+		{
+			$this->client->logout(array());
+		}
+		
 		public function setUsername($username)
 		{
 			$this->username = $username;
